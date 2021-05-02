@@ -23,16 +23,20 @@ padding: 0;
   font-size: 1.3rem;
 }
 
-.movieListjumbo{
-  margin: 30px 40px 20px 30px;
-  border-radius:1em;
+.movieListCard{
+  margin: 30px 50px 20px 50px;
+  /* border-radius:1em; */
+  padding: 10px 20px 10px 50px;
 }
 
 .movieTitle{
-  padding-right: 15px;
+  padding-right: 10px;
 }
 .movieYear{
-  padding-right: 15px;
+  padding-right: 8px;
+}
+#movieListHeading{
+  padding-left: revert;
 }
 /* 
 .App-header {

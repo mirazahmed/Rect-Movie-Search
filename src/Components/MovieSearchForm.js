@@ -42,8 +42,8 @@ return (
     <div className="container fluid">
         {/* */}
         <Form  onSubmit={handleSubmit}>
-            <Form.Row className="justify-content-center">
-                <Col lg={6}>
+            <Form.Row className="justify-content-left">
+                <Col lg={12}>
                     <Form.Label className="title">Movie Title</Form.Label>                            
                         <Form.Control type="search" required value={movieTitle} onChange={(e)=> setMovieTitle(e.target.value)} id="add" />
                 </Col>                
