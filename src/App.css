@@ -2,10 +2,12 @@
 margin: 0;
 padding: 0;
 }
-/* .App {
-  text-align: center;
- } */
 
+.App{
+  background-color: #f5f3f2;
+  min-height: 100vh;
+}
+ 
 #add{  
   padding-left: 30px;
   color: gray;
@@ -19,55 +21,29 @@ padding: 0;
   justify-content: left;
 }
 
-.movielist{
-  font-size: 1.3rem;
+.list{
+  background-color: white;
 }
 
 .movieListCard{
-  margin: 30px 50px 20px 50px;
+  margin: 30px 0px 20px 0px;
+  /* background-color: red; */
+  
   /* border-radius:1em; */
-  padding: 10px 20px 10px 50px;
+  padding: 10px 0px 10px 20px;
 }
 
 .movieTitle{
   padding-right: 10px;
+  /* background-color: red; */
 }
 .movieYear{
   padding-right: 8px;
 }
-#movieListHeading{
-  padding-left: revert;
+
+
+.nominationListCard{
+  margin: 30px 0px 20px 0px;
+  /* border-radius:1em; */
+  padding: 10px 0px 10px 20px;
 }
-/* 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

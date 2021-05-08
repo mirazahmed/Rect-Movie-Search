@@ -16,7 +16,6 @@ export default function MovieSearchForm() {
         
         .then(res=>{
             let newMovie= res.data.Search;
-            // console.log(newMovie);
             setMovieList({
                 movieList: newMovie
             });
@@ -33,27 +32,25 @@ export default function MovieSearchForm() {
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        // console.log(movieTitle);
     }
 
 
-return (
-    <>
-    <div className="container fluid">
-        {/* */}
-        <Form  onSubmit={handleSubmit}>
-            <Form.Row className="justify-content-left">
-                <Col lg={12}>
-                    <Form.Label className="title">Movie Title</Form.Label>                            
-                        <Form.Control type="search" required value={movieTitle} onChange={(e)=> setMovieTitle(e.target.value)} id="add" />
-                </Col>                
-            </Form.Row>                                                     
-        </Form>        
-    </div>
-       
+    return (
+        <>
+        <div className="container fluid">
+            <Form onSubmit={handleSubmit}>
+                <Form.Row className="justify-content-left">
+                    <Col lg={12}>
+                        <Form.Label className="title">Movie Title</Form.Label>                            
+                            <Form.Control type="search" required value={movieTitle} onChange={(e)=> setMovieTitle(e.target.value)} id="add" />
+                    </Col>                
+                </Form.Row>                                                     
+            </Form>        
+        </div>
+        
 
-    <ListMovies movieList={movieList} movieTitle={movieTitle} />
-    </>
-   
+        <ListMovies movieList={movieList} movieTitle={movieTitle} />
+        </>
+    
     )
 }

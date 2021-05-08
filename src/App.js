@@ -1,14 +1,17 @@
 
 import './App.css';
+import './index.css';
 
 import MovieSearchForm from './Components/MovieSearchForm';
-// import ListMovies from './Components/ListMovies';
+
 
 function App() {
   return (
     <div className="App">
-      <MovieSearchForm />
-      
+      <div className="container fluid">
+        <h1>The Shoppies</h1>
+      </div>
+      <MovieSearchForm />        
     </div>
   );
 }
