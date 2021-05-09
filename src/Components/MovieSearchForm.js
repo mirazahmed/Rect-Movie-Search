@@ -21,7 +21,7 @@ export default function MovieSearchForm() {
     
 
     useEffect(()=> {
-        axios.get(`http://www.omdbapi.com/?s=%22${movieTitle}%22&apikey=${env.MOVIE_SEARCH_API_KEY}`)
+        axios.get(`https://www.omdbapi.com/?s=%22${movieTitle}%22&apikey=${env.MOVIE_SEARCH_API_KEY}`)
         
         .then(res=>{
             let newMovie= res.data.Search;
