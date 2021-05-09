@@ -9,6 +9,7 @@
 import React,{useState, useEffect} from 'react';
 import{Form, Col} from 'react-bootstrap';
 import ListMovies from './ListMovies';
+import env from 'react-dotenv';
 import axios from 'axios';
 
 
@@ -20,7 +21,7 @@ export default function MovieSearchForm() {
     
 
     useEffect(()=> {
-        axios.get(`http://www.omdbapi.com/?s=%22${movieTitle}%22&apikey=a0bacdc6`)
+        axios.get(`http://www.omdbapi.com/?s=%22${movieTitle}%22&apikey=${env.MOVIE_SEARCH_API_KEY}`)
         
         .then(res=>{
             let newMovie= res.data.Search;
