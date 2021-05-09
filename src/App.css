@@ -1,12 +1,18 @@
 *{
-margin: 0;
-padding: 0;
-}
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+} 
 
 .App{
-  background-color: #f5f3f2;
+  background-color: #f5f3f2; 
   min-height: 100vh;
-}
+  
+ }
+
+ .theShoppies{
+   padding: 20px 0px 20px 0px;
+ }
  
 #add{  
   padding-left: 30px;
@@ -15,6 +21,10 @@ padding: 0;
   background-repeat: no-repeat;
   background-position: left center;
   outline: 0;
+}
+
+.waitingforTitle{
+  display: inline;
 }
 
 .title{
@@ -27,23 +37,27 @@ padding: 0;
 
 .movieListCard{
   margin: 30px 0px 20px 0px;
-  /* background-color: red; */
-  
-  /* border-radius:1em; */
   padding: 10px 0px 10px 20px;
+  background-color: #fff5ff;
 }
 
 .movieTitle{
   padding-right: 10px;
-  /* background-color: red; */
+  font-weight: bold;
 }
 .movieYear{
   padding-right: 8px;
+  font-weight:600;
 }
-
 
 .nominationListCard{
   margin: 30px 0px 20px 0px;
-  /* border-radius:1em; */
-  padding: 10px 0px 10px 20px;
+  padding: 5px 0px 5px 20px;
+  background-color: #fff5ff;
+  
 }
+
+.waitingforNomination{
+  display: inline;
+}
+

@@ -6,7 +6,7 @@
 //Render nominatedMovies and removeMovie as props to NominationList component
 
 import React,{useState} from 'react';
-import { Button, Card,Row, Col} from 'react-bootstrap';
+import { Button, Card,Row,Col} from 'react-bootstrap';
 import NominationList from './NominationList';
 
 let Spinner = require('react-spinkit');
@@ -17,10 +17,9 @@ export default function ListMovies(props) {
 
     const addNewMovie = (movie)=>{
 
-          setNominatedMovie(
+        setNominatedMovie(
             [...nominatedMovies, {Title: movie.Title, Year: movie.Year, movieID: movie.imdbID}]            
-        )                
-                
+        )          
     }
 
     
@@ -39,40 +38,39 @@ export default function ListMovies(props) {
         <div>
             <h3>Results for "{props.movieTitle}"</h3>
         
-            {props.movieTitle==='' ? (
+            {props.movieTitle==='' ? 
             <div>
                 <span>Waiting for user to search for a movie </span> 
                 <Spinner name="three-bounce" className ="waitingforTitle" fadeIn='quarter' color="purple"/>            
-            </div>) : (<div></div>)}
+            </div> : <div></div>}
 
         </div>
         
     )
 
     const allMovies = ((movies.movieList === '' || movies.movieList === undefined) ? 
-    (<div></div>) : ( 
+        
+        <div></div> : ( 
         
         movies.movieList.map((movie,index)=>{
             
         return(
-            <div key={index}>
-                                   
-            <ul>
-                <li>
-                    <span className="movieTitle">{movie.Title}</span> 
-                    <span className="movieYear">({movie.Year})</span> 
-                    {                            
-                        (nominatedMovies.find(nominatedMovie=> nominatedMovie.movieID === movie.imdbID ) !== undefined) ? 
-                        
-                        (<Button variant="secondary" disabled>Nominate</Button>) :
+            <div key={index}>                                   
+                <ul>
+                    <li>
+                        <span className="movieTitle">{movie.Title}</span> 
+                        <span className="movieYear">({movie.Year})</span> 
+                        {                            
+                            (nominatedMovies.find(nominatedMovie=> nominatedMovie.movieID === movie.imdbID ) !== undefined) ? 
+                            
+                            <Button variant="secondary" disabled>Nominate</Button> :
 
-                        (
                             <Button as="input" type="submit" value="Nominate" variant="outline-secondary" onClick={()=>addNewMovie(movie)}/>
-                        )
-                    }                                            
-                </li>
-            </ul> 
-
+                            
+                        }
+                    
+                    </li>                
+                </ul> 
             </div>                   
         )
     })))

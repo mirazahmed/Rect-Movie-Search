@@ -1,3 +1,11 @@
+
+//This component renders a movie title search form and
+//Save the search string used in a state called movieTitle
+//Call OMMDB API with movieTitle 
+//Save the response object of API call to movieList state
+//Render movieList and movieTitle as props to ListMovies component
+
+
 import React,{useState, useEffect} from 'react';
 import{Form, Col} from 'react-bootstrap';
 import ListMovies from './ListMovies';
@@ -28,27 +36,20 @@ export default function MovieSearchForm() {
         
     },[movieTitle])
 
-
-
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-    }
-
-
+         
     return (
         <>
         <div className="container fluid">
-            <Form onSubmit={handleSubmit}>
+            <Form>
                 <Form.Row className="justify-content-left">
                     <Col lg={12}>
-                        <Form.Label className="title">Movie Title</Form.Label>                            
-                            <Form.Control type="search" required value={movieTitle} onChange={(e)=> setMovieTitle(e.target.value)} id="add" />
+                        <Form.Label className="title">Search Movie Title</Form.Label>                            
+                            <Form.Control type="text" required value={movieTitle} onChange={(e)=> setMovieTitle(e.target.value)} id="add" />
                     </Col>                
                 </Form.Row>                                                     
             </Form>        
         </div>
         
-
         <ListMovies movieList={movieList} movieTitle={movieTitle} />
         </>
     
