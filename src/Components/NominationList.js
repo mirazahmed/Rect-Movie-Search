@@ -13,7 +13,6 @@ let Spinner = require('react-spinkit');
 
 export default function NominationList(props) {
 
-    
     return (
 
         <div>
@@ -44,13 +43,24 @@ export default function NominationList(props) {
 
             {props.nominatedMovies.length >=5 ? (
                 
+                props.nominatedMovies.length===5 ?               
+                
                 <Banner className="banner"
                     title="Movie nomination completed !!!" 
                     css={{                        
                             backgroundColor: "#f27292",
                             fontStyle: "Oblique"                            
                         }}                                                                                     
+                /> :
+                 
+                <Banner className="banner"
+                    title={`Too many nominations!!! Only 5 is required. Please remove ${props.nominatedMovies.length - 5} nominations` }
+                    css={{                        
+                            backgroundColor: "#fa3434",
+                            fontStyle: "Oblique"                            
+                        }}                                                                                     
                 />
+
             ) : <div></div>}
 
         </div>
