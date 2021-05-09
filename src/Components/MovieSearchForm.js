@@ -37,11 +37,15 @@ export default function MovieSearchForm() {
         
     },[movieTitle])
 
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+    }
+
          
     return (
         <>
         <div className="container fluid">
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Row className="justify-content-left">
                     <Col lg={12}>
                         <Form.Label className="title">Search Movie Title</Form.Label>                            
